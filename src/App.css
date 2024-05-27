@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  animation: gradientBackground 5s ease infinite;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 2px solid black;
+
 }
 
-.App-link {
-  color: #61dafb;
+.navbar img {
+  height: 50px;
+  width: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar nav a {
+  color: rgb(5, 4, 4);
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #b3a19e;
+}
+
+@media (max-width: 768px) {
+  .navbar nav {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar nav a {
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .navbar img {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.navbar nav span {
+  display: none;
+}
+
+@keyframes gradientBackground {
+  0%, 25% {
+    background: linear-gradient(to right, #1a1a1a, #ff0000);
+  }
+  25%, 50% {
+    background: linear-gradient(to left, #1a1a1a, #00c3ff);
+  }
+  50%, 75% {
+    background: linear-gradient(to right, #1a1a1a, #00ff8c);
+  }
+  75%, 100% {
+    background: linear-gradient(to left, #1a1a1a, #a600ff);
   }
 }
