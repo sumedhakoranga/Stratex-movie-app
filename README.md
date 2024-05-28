@@ -30,7 +30,10 @@ To get this project running locally, follow these steps:
   ```
    npm install
   ```
-
+**Create a .env file in the root**
+```
+REACT_APP_API_URL=https://dummyapi.online/api/movies
+```
   **Start the development server:**
   ```
   npm start
